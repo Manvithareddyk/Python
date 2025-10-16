@@ -1,0 +1,9 @@
+def factorial(num):
+    fact = 1
+    for i in range(num, 1, -1):
+        fact *= i
+    return fact
+n= int(input("enter n :"))
+r= int(input("enter rows:"))
+p = fact n // fact (n-r)
+print("arrangement is : ", p)
