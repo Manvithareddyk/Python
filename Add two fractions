@@ -1,0 +1,8 @@
+from fractions import Fraction
+
+f1 = Fraction(int(input("Enter numerator of first fraction: ")), int(input("Enter denominator of first fraction: ")))
+f2 = Fraction(int(input("Enter numerator of second fraction: ")), int(input("Enter denominator of second fraction: ")))
+
+result = f1 + f2
+
+print("Sum of fractions =", result)
