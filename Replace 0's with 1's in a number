@@ -1,0 +1,31 @@
+#taking Input
+n=int(input('Enter number: '))
+#converting into string
+n=str(n) 
+#then into the list
+n=list(n)
+r="" #empty string for addind it the item of list
+for i in range(len(n)):
+    #if we find '0' we will replace it with '1'
+    if(n[i]=='0'):
+        n[i]='1'
+    r=r + n[i]  #creating the new integer 
+del n    
+print("Converted number is :",int(r))
+##method 2 
+#take inputs
+Val = int(input('Enter number:'))
+#change type to string
+Val = str(Val)
+Replaced = Val.replace('0','1')
+print("Converted number is:" + Replaced)
+##method 3
+n = input("Enter number: ")
+r = ""
+
+for i in n:
+    if i == '0':      # notice quotes
+        r += '1'
+    else:
+        r += i
+print("Converted number is :",int(r))
