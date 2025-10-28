@@ -1,0 +1,12 @@
+e = input("Enter a string: ")
+r = ""
+
+for i in e:
+    if i == 'z':
+        r += 'a'
+    elif i == 'Z':
+        r += 'A'
+    else:
+        r += chr(ord(i) + 1)
+
+print(r)
