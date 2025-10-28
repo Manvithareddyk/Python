@@ -1,0 +1,6 @@
+e = input("Enter a string: ")
+t = input("Enter a string: ")
+for i in e:
+    if i in t:
+        t=t.replace(i,"")
+print(t)
