@@ -1,0 +1,8 @@
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+new=[]
+for i in nums:
+    if i not in new:
+        new.append(i)
+    else:
+        new.remove(i)
+print(new)
