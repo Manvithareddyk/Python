@@ -1,0 +1,29 @@
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+freq = {}
+
+# Step 1: Count frequency of each element
+for i in nums:
+    if i in freq:
+        freq[i] += 1
+    else:
+        freq[i] = 1
+
+# Step 2: Sort manually using loops
+result = []
+while freq:
+    # find element with smallest frequency
+    min_key = None
+    min_value = float('inf')
+    for k in freq:
+        if freq[k] < min_value:
+            min_value = freq[k]
+            min_key = k
+
+    # add that element repeated min_value times
+    for _ in range(min_value):
+        result.append(min_key)
+
+    # remove it from dictionary
+    del freq[min_key]
+
+print("Sorted by ascending frequency:", result)
