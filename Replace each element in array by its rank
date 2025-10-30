@@ -1,0 +1,12 @@
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+ranks = []
+
+for i in nums:
+    # rank = 1 + number of smaller elements
+    rank = 1
+    for j in nums:
+        if j < i:
+            rank += 1
+    ranks.append(rank)
+
+print("Ranked list:", ranks)
