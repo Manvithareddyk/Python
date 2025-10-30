@@ -1,0 +1,23 @@
+def right_rot(arr, n):
+    for _ in range(n):   # repeat n times
+        last = arr[-1]   # take last element
+        for i in range(len(arr)-1, 0, -1):
+            arr[i] = arr[i-1]   # shift right
+        arr[0] = last
+    return arr
+
+
+def left_rot(arr, n):
+    for _ in range(n):   # repeat n times
+        first = arr[0]   # take first element
+        for i in range(len(arr)-1):
+            arr[i] = arr[i+1]   # shift left
+        arr[-1] = first
+    return arr
+
+
+arr = list(map(int, input("Enter numbers separated by space: ").split()))
+n = int(input("Enter number of rotations: "))
+
+print("Left rotation:", left_rot(arr[:], n))
+print("Right rotation:", right_rot(arr[:], n))
