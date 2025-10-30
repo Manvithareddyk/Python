@@ -1,0 +1,10 @@
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+
+for i in range(len(nums)):
+    left_sum = sum(nums[:i])
+    right_sum = sum(nums[i+1:])
+    if left_sum == right_sum:
+        print("Equilibrium index:", i)
+        break
+else:
+    print("No equilibrium index found")
