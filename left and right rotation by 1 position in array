@@ -1,0 +1,23 @@
+def right_rot(arr): 
+    right = []                      # should be 'right', not 'left'
+    for n in range(len(arr)):
+        if n == 0:
+            right.append(arr[-1])   # last element comes first
+        else:
+            right.append(arr[n - 1])
+    return right
+
+
+def left_rot(arr):
+    left = []                       # should be 'left', not 'right'
+    for n in range(len(arr)):
+        if n == len(arr) - 1:
+            left.append(arr[0])     # first element goes last
+        else:
+            left.append(arr[n + 1])
+    return left
+
+
+arr = list(map(int, input("Enter numbers separated by space: ").split()))
+print("Left rotation:", left_rot(arr))
+print("Right rotation:", right_rot(arr))
