@@ -1,0 +1,6 @@
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+element = int(input("Enter n: "))
+
+for i in range(len(nums)):
+    if nums[i] == element:
+        print("Element found at index", i)
